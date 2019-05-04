@@ -9,8 +9,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "banksdetails")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name = "bankDetails")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class BankAccount {
 
 	@Id

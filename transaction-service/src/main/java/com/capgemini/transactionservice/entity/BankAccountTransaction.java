@@ -1,7 +1,7 @@
 package com.capgemini.transactionservice.entity;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,21 +18,19 @@ public class BankAccountTransaction {
 	private int transactionId;
 	private String accountHolderName;
 	private String accountType;
-	private Date date;
-	private Time time;
+	private LocalDate date;
+	private LocalTime time;
 
 	public BankAccountTransaction() {
 		super();
 	}
 
-	public BankAccountTransaction(int transactionId, String accountHolderName, String accountType, Date date,
-			Time time) {
+	public BankAccountTransaction(String accountHolderName, String accountType) {
 		super();
-		this.transactionId = transactionId;
 		this.accountHolderName = accountHolderName;
 		this.accountType = accountType;
-		this.date = date;
-		this.time = time;
+		this.date = LocalDate.now();
+		this.time = LocalTime.now();
 	}
 
 	public int getTransactionId() {
@@ -59,19 +57,19 @@ public class BankAccountTransaction {
 		this.accountType = accountType;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
-	public Time getTime() {
+	public LocalTime getTime() {
 		return time;
 	}
 
-	public void setTime(Time time) {
+	public void setTime(LocalTime time) {
 		this.time = time;
 	}
 

@@ -33,6 +33,7 @@ public class BankAccountServiceImpl implements BankAccountService {
 	public BankAccount updateAccountById(BankAccount account) {
 		BankAccount account2 = dao.findById(account.getAccountNumber()).get();
 		account2.setAccountHolderName(account.getAccountHolderName());
+		account2.setAccountBalance(account.getAccountBalance());
 		return dao.save(account2);
 	}
 
