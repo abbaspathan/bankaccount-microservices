@@ -1,0 +1,26 @@
+
+<div class="container">
+    <table class="table table-bordered" *ngIf="account && account.length">
+        <thead>
+            <tr>
+                <th>Account Number</th>
+                <th>Account Holder Name</th>
+                <th>Account Type</th>
+                <th>Salary Account</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of account">
+                <td>{{account.accountNumber}}</td>
+                <td>{{account.accountHolderName}}</td>
+                <td>{{account.accountType}}</td>
+                <td>{{account.salary}}</td>
+                <td>
+                    <button type="button" class="btn btn-block" style="background-color:#ff9f00">Edit</button>
+                    <button type="button" class="btn btn-block" style="background-color:#fb641b">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

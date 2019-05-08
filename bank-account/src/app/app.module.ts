@@ -18,6 +18,7 @@ import { AccountModule } from './account/account.module';
     BrowserModule,
     AccountModule,
     RouterModule.forRoot(appRouter)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
